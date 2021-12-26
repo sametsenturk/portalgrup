@@ -1,0 +1,30 @@
+﻿@model List<DbCustomer>
+
+@{
+    ViewData["Title"] = "Müşteri Listesi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>TC</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Doğum Yılı</th>
+            <th>Şirket</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.TC</td>
+            <td>@item.Ad</td>
+            <td>@item.Soyad</td>
+            <td>@item.DogumYili</td>
+            <td>@item.Company</td>
+        </tr>
+        }
+    </tbody>
+</table>

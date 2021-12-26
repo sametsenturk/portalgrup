@@ -1,0 +1,19 @@
+﻿@model AddCustomerVM 
+
+
+<form asp-controller="Home" asp-action="Add" method="post">
+    <input type="number" name="TC" id="TC" placeholder="TC" />
+    <br />
+    <input type="text" name="Name" id="Name" placeholder="Name" />
+    <br />
+    <input type="text" name="Surname" id="Surname" placeholder="Surname" />
+    <br />
+    <input type="number" name="BirthYear" id="BirthYear" placeholder="BirthYear" />
+    <br />
+    <select asp-for="Company" asp-items="Html.GetEnumSelectList(typeof(CompanyEnum))"></select>
+    <br />
+    <button type="submit">Save</button>
+
+    <hr />
+    <strong>@ViewBag.msg</strong>
+</form>
